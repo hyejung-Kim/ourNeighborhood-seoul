@@ -66,7 +66,7 @@ public class BoardController {
 					win.getPostView().setContent(post.getContent());
 					win.getPostView().setWriter(post.getWriter());
 
-					if (post.getWriter().equals(win.getId())) {
+					if (post.getWriter().equals(win.getId()) || win.getId().equals("admin")) {
 						win.getPostView().imWriter();
 					} else {
 						win.getPostView().imNotWriter();

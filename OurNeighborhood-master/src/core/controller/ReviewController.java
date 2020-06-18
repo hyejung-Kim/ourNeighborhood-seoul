@@ -63,7 +63,7 @@ public class ReviewController {
 					win.getReviewView().setAverage(Float.toString(review.getRatingAverage()));
 					win.getReviewView().setComment(review.getComment());
 		
-					if (review.getWriter().equals(win.getId())) {
+					if (review.getWriter().equals(win.getId()) || win.getId().equals("admin")) {
 						win.getReviewView().imWriter();
 					} else {
 						win.getReviewView().imNotWriter();
