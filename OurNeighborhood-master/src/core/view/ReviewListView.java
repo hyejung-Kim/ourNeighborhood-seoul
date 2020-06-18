@@ -160,12 +160,9 @@ public class ReviewListView extends JPanel {
 		model = new DefaultTableModel(colNames, 0);
 		table = new JTable(model);
 		table.setBackground(Color.WHITE);
-		table.getColumnModel().getColumn(0).setWidth(20);
-		table.getColumnModel().getColumn(1).setWidth(300);
-		table.getColumnModel().getColumn(2).setWidth(45);
-		table.setRowHeight(25);
 		table.setShowVerticalLines(false);
 		scrollPane.setViewportView(table);
+		table.repaint();
 
 
 
@@ -189,6 +186,13 @@ public class ReviewListView extends JPanel {
 				return columnEditables[column];
 			}
 		});
+		
+		table.getColumnModel().getColumn(0).setPreferredWidth(70);
+		table.getColumnModel().getColumn(1).setPreferredWidth(100);
+		table.getColumnModel().getColumn(2).setPreferredWidth(70);
+		table.getColumnModel().getColumn(3).setPreferredWidth(500);
+		table.getColumnModel().getColumn(4).setPreferredWidth(100);
+		table.setRowHeight(30);
 
 	}
 

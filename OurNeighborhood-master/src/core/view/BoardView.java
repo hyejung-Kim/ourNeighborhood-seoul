@@ -196,6 +196,12 @@ public class BoardView extends JPanel {
 				return columnEditables[column];
 			}
 		});
+		
+		table.getColumnModel().getColumn(0).setPreferredWidth(70);
+		table.getColumnModel().getColumn(1).setPreferredWidth(500);
+		table.getColumnModel().getColumn(2).setPreferredWidth(100);
+		table.getColumnModel().getColumn(3).setPreferredWidth(150);
+		table.setRowHeight(30);
 
 	}
 
